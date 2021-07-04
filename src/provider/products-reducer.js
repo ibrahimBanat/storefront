@@ -1,12 +1,12 @@
 const initialState = {
   products: [
     {
-      name: 'Iphone 12 Pro Max',
+      name: 'Apple MacBook Pro 13',
       category: 'Electronics',
-      price: 800,
-      count: 32,
+      price: 1100,
+      count: 12,
       image:
-        'https://assets.swappie.com/swappie-product-iphone-12-pro-max-graphite.png',
+        'https://gts.jo/image/cache/catalog/products/laptops/apple/MPXT2AB-1200x1200.jpg',
     },
     {
       name: 'ASUS hero2',
@@ -25,33 +25,32 @@ const initialState = {
         'https://images.samsung.com/is/image/samsung/levant-uhd-tu8000-ua50tu8000uxtw-frontblack-229856395?$720_576_PNG$',
     },
     {
-      name: 'Pizza',
+      name: 'PECORINO MARZOLINO',
       category: 'Food',
-      price: 6,
+      price: 15,
       count: 15,
       image:
-        'https://lh3.googleusercontent.com/proxy/5UulawJ1fMPviHA_aoCKxxlgv4cc9tFlGHDH0CQKe6BtomVH2yYPhgBac3EN8LIsP9DM-QF9rSe9ldv42HL9-iFnycfgynFY7ezZOKMcE8pR5ozYwHo1U6yv3NNSWW4',
+        'https://cdn11.bigcommerce.com/s-7c08qbh/images/stencil/600x600/products/2675/8034/marzolino_wheel-1__93459.1622557124.jpg?c=2',
     },
     {
-      name: 'Burger',
+      name: 'ROSEMARY CROSTINI',
       category: 'Food',
       price: 4,
       count: 45,
       image:
-        'https://pngimage.net/wp-content/uploads/2018/05/amburguesa-png.png',
+        'https://cdn11.bigcommerce.com/s-7c08qbh/images/stencil/600x600/products/384/1125/DB_CrostiniRosemary_web_edited_db__22481.1612903991.jpg?c=2',
     },
     {
-      name: 'Ice cream',
+      name: 'SALTED ROSEMARY SHORTBREAD',
       category: 'Food',
-      price: 3,
+      price: 6,
       count: 11,
       image:
-        'https://www.freeiconspng.com/thumbs/ice-cream-png/fruits-ice-cream-png-1.png',
+        'https://cdn11.bigcommerce.com/s-7c08qbh/images/stencil/600x600/products/1891/5490/large__35479.1618332683.jpg?c=2',
     },
   ],
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
 const productsReducer = (state = initialState, action) => {
   let { type, payload } = action;
   switch (type) {

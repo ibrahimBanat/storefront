@@ -29,11 +29,4 @@ const categoryReducer = (state = initialState, action) => {
   }
 };
 
-export const activeCategory = name => {
-  return {
-    type: 'ACTIVE',
-    payload: name,
-  };
-};
-
 export default categoryReducer;
