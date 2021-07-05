@@ -25,8 +25,9 @@ function Header(props) {
   );
 }
 const mapStateToprops = state => {
+  console.log(state);
   return {
-    cart: state.cart.cart,
+    cart: state.cart,
   };
 };
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToprops)(Header);
