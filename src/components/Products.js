@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { addProduct } from '../provider/actions/addProduct';
 import ProductCard from './ProductCard';
 import GridList from '@material-ui/core/GridList';
