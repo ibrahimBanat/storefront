@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 function Header(props) {
   const style = useStyles();
   return (
-    <AppBar color='' position='static' style={{ marginBottom: '20px' }}>
+    <AppBar color='' position='static' style={{ backgroundColor: '#FB2E86' }}>
       <Toolbar className={style.space}>
         <Button>OUR STORE</Button>
         <Button>cart</Button>

@@ -7,7 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 
 function Products(props) {
-  console.log(props);
   return (
     <>
       <p style={{ marginLeft: '46%', fontSize: '25px' }}>{props.active}</p>
@@ -57,16 +56,10 @@ function Products(props) {
                   In Stock : {product.count}
                 </CardContent>
                 <section className='btnn'>
-                  <Button
-                    variant='light'
-                    style={{ border: '1px solid gray', width: '143.7px' }}
-                  >
+                  <Button variant='light' style={{ border: '1px solid gray' }}>
                     ADD TO CART
                   </Button>
-                  <Button
-                    variant='light'
-                    style={{ border: '1px solid gray', width: '143.7px' }}
-                  >
+                  <Button variant='light' style={{ border: '1px solid gray' }}>
                     VIEW DETAILS
                   </Button>
                 </section>
@@ -82,7 +75,6 @@ function Products(props) {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return { active: state.categories.active, products: state.products.products };
 };
 
