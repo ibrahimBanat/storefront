@@ -16,15 +16,9 @@ function Categories(props) {
           <ButtonBase
             key={category.name}
             onClick={() => props.activeCategory(category.name)}
-            style={{ marginLeft: '30px' }}
+            style={{ marginLeft: '50px' }}
           >
             <Typography>{category.displayName}</Typography>
-            <img
-              src={category.url}
-              alt={category.displayName}
-              width='50'
-              height='50'
-            ></img>
           </ButtonBase>
         );
       })}

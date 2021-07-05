@@ -19,7 +19,7 @@ function Header(props) {
     <AppBar color='' position='static' style={{ backgroundColor: '#FB2E86' }}>
       <Toolbar className={style.space}>
         <Button>OUR STORE</Button>
-        <Button>{props.cart.length}</Button>
+        <Button>Cart({props.cart.cart.length})</Button>
       </Toolbar>
     </AppBar>
   );
