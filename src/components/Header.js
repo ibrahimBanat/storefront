@@ -1,9 +1,12 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
+import { showCart } from '../provider/actions/showCart';
 
 const useStyles = makeStyles(theme => ({
   space: {
@@ -16,9 +19,14 @@ function Header(props) {
     <AppBar color='' position='static' style={{ backgroundColor: '#FB2E86' }}>
       <Toolbar className={style.space}>
         <Button>OUR STORE</Button>
-        <Button>cart</Button>
+        <Button>{props.cart.length}</Button>
       </Toolbar>
     </AppBar>
   );
 }
-export default Header;
+const mapStateToprops = state => {
+  return {
+    cart: state.cart.cart,
+  };
+};
+export default connect(mapStateToProps)(Header);
