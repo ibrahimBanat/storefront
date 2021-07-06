@@ -4,7 +4,7 @@ An e-Commerce storefront using React with Redux, coupled with your live API serv
 
 ## Tests & Deployment
 
-[Preview]()
+[Preview](https://epic-wilson-f49cb7.netlify.app/)
 
 ## Available Scripts
 
