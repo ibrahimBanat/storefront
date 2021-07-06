@@ -1,4 +1,4 @@
-const initialState = {
+let initialState = {
   products: [
     {
       name: 'Apple MacBook Pro 13',
@@ -70,7 +70,9 @@ const productsReducer = (state = initialState, action) => {
         return product;
       });
       return { ...state };
-
+    case 'GET_PRODUCTS':
+      initialState = payload;
+      return payload;
     default:
       return state;
   }
