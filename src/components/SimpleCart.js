@@ -25,6 +25,7 @@ const ChipsArray = props => {
   const classes = useStyles();
 
   console.log(props);
+
   return (
     <>
       <If condition={() => props.cart.length !== 0}>
@@ -34,7 +35,7 @@ const ChipsArray = props => {
             return (
               <li key={idx}>
                 <Chip
-                  label={item.item}
+                  label={item}
                   onDelete={() => {
                     props.deleteFromCart(item);
                   }}

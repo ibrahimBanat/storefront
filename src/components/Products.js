@@ -9,7 +9,7 @@ import { getApiData } from '../provider/actions/action-creator/getApiData';
 function Products(props) {
   useEffect(() => {
     props.getApiData();
-    console.log(props.products);
+    console.log(props);
   }, []);
   return (
     <>
@@ -30,6 +30,7 @@ function Products(props) {
                   name={product.item}
                   key={product.item}
                   product={product}
+                  des={props.inStock}
                 />
               </GridListTile>
             );

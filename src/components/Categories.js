@@ -5,6 +5,7 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 
 function Categories(props) {
+  console.log(props);
   return (
     <>
       <p style={{ marginLeft: '50px', fontSize: '20px' }}>
@@ -15,11 +16,11 @@ function Categories(props) {
         console.log(category);
         return (
           <ButtonBase
-            key={category.name}
-            onClick={() => props.activeCategory(category.name)}
+            key={category}
+            onClick={() => props.activeCategory(category)}
             style={{ marginLeft: '50px' }}
           >
-            <Typography>{category.displayName}</Typography>
+            <Typography>{category}</Typography>
           </ButtonBase>
         );
       })}

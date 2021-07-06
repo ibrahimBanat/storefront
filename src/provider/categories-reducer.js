@@ -1,18 +1,5 @@
 const initialState = {
-  categories: [
-    {
-      name: 'food',
-      displayName: 'Food',
-      description: 'Food description',
-      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5prfTaOTAyUDETilMUzfaFlgU5UA0MHluHfLLsq4JW18dqzFdidn6R9Es7voek4taAQ8&usqp=CAU',
-    },
-    {
-      name: 'electronics',
-      displayName: 'Electronics',
-      description: 'Electronics description',
-      url: 'https://www.1stunitedpawn.com/wp-content/uploads/2014/03/Electronics.png',
-    },
-  ],
+  categories: ['food', 'electronics'],
   active: '',
 };
 
@@ -29,9 +16,11 @@ const categoryReducer = (state = initialState, action) => {
       let category = payload.category.map(item => {
         return item.category;
       });
-      console.log(category);
-      initialState.categories = category;
-      return category;
+      let unique = [...new Set(category)];
+      console.log(unique);
+      initialState.categories = unique;
+
+      return { categories: unique, active: '' };
 
     default:
       return state;

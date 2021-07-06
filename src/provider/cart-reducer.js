@@ -6,14 +6,15 @@ export default (state = intiState, action) => {
   switch (type) {
     case 'ADD':
       const products = state.cart.map(product => product.name);
-      if (!products.includes(payload.name)) {
-        return { cart: [...state.cart, payload], visible: true };
-      }
 
+      if (!products.includes(payload.item)) {
+        return { cart: [...state.cart, payload.item], visible: true };
+      }
+      console.log(payload);
       return { cart: state.cart, show: true };
     case 'DELETE':
       const product = state.cart.filter(product => {
-        return product.name !== payload.name;
+        return product.item !== payload.item;
       });
       return { cart: [...product], visible: true };
     default:

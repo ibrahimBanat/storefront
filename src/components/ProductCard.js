@@ -33,6 +33,9 @@ const ImgMediaCard = props => {
         <Typography gutterBottom variant='h6' component='h2'>
           {props.name}
         </Typography>
+        <Typography variant='body2' color='textSecondary' component='p'>
+          {props.des}
+        </Typography>
       </CardActionArea>
 
       <CardActions>
