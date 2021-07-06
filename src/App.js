@@ -6,6 +6,7 @@ import Products from './components/Products';
 
 import { Provider } from 'react-redux';
 import store from './provider/store';
+import SimpleCart from './components/SimpleCart';
 
 const App = () => {
   return (
@@ -13,8 +14,9 @@ const App = () => {
       <div className='app'>
         <Header />
         <Categories />
+        <SimpleCart />
         <Products />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Provider>
   );

@@ -59,6 +59,18 @@ const productsReducer = (state = initialState, action) => {
         product.category === payload ? product.category : null
       );
       return { ...state, product: product };
+    case 'ADDTOCART':
+      state.products = state.products.map(product => {
+        if (product.name === payload.name) {
+          if (product.count > 0) {
+            product.count = product.count - 1;
+          }
+          return product;
+        }
+        return product;
+      });
+      return { ...state };
+
     default:
       return state;
   }
