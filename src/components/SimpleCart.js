@@ -34,7 +34,7 @@ const ChipsArray = props => {
             return (
               <li key={idx}>
                 <Chip
-                  label={item.name}
+                  label={item.item}
                   onDelete={() => {
                     props.deleteFromCart(item);
                   }}

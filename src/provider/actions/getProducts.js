@@ -1,6 +1,6 @@
 const getProducts = product => {
   return {
-    type: 'GET_PRODUCTS',
+    type: 'GET_P',
     payload: product,
   };
 };

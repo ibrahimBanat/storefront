@@ -70,9 +70,9 @@ const productsReducer = (state = initialState, action) => {
         return product;
       });
       return { ...state };
-    case 'GET_PRODUCTS':
-      initialState = payload;
-      return payload;
+    case 'GET_P':
+      console.log(payload.products);
+      return { ...state, products: payload.products }; 
     default:
       return state;
   }

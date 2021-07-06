@@ -1,11 +1,14 @@
 import axios from 'axios';
-import { getProducts } from '../getProducts';
+import getProducts from '../getProducts';
+import { getCategories } from '../getCategories';
+
 let url = 'https://api-server-0.herokuapp.com/products';
-const getApiData = url => {
+export const getApiData = () => {
   return dispatch => {
     return axios.get(url).then(response => {
-      dispatch(getProducts({ products: response.body.result }));
+      console.log(response);
+      dispatch(getCategories({ category: response.data }));
+      dispatch(getProducts({ products: response.data }));
     });
   };
 };
-export default getApiData;

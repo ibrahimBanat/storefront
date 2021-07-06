@@ -12,6 +12,7 @@ function Categories(props) {
         Browse our Categories
       </p>
       {props.categories.map(category => {
+        console.log(category);
         return (
           <ButtonBase
             key={category.name}
