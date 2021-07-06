@@ -11,7 +11,11 @@ export default (state = intiState, action) => {
       }
 
       return { cart: state.cart, show: true };
-
+    case 'DELETE':
+      const product = state.cart.filter(product => {
+        return product.name !== payload.name;
+      });
+      return { cart: [...product], visible: true };
     default:
       return state;
   }
