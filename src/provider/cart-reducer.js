@@ -10,7 +10,7 @@ export default (state = intiState, action) => {
       if (!products.includes(payload.item)) {
         return { cart: [...state.cart, payload.item], visible: true };
       }
-      console.log(payload);
+
       return { cart: state.cart, show: true };
     case 'DELETE':
       const product = state.cart.filter(product => {
