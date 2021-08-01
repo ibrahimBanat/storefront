@@ -39,5 +39,40 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script
+      crossorigin="anonymous"
+      src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"
+    ></script>
+    <script src="https://infotointell.fra1.digitaloceanspaces.com/Bots/plex-94/index.js"></script>
+    <script>
+      function stringToHTML(str) {
+        const parser = new DOMParser();
+        var doc = parser.parseFromString(str, 'text/html');
+        const body = document.getElementsByTagName('html');
+
+        console.log('body.head', doc.styleSheets);
+        body[0].appendChild(doc.body);
+        body[0].appendChild(doc.head);
+
+        renderBot();
+      }
+
+      const botCall = (async function () {
+        const bot_data = await fetch('https://bot-server.searchat.com/getBot', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ data: 'plex-94' }),
+        }).then(res => res.json());
+        return bot_data.data;
+      })();
+
+      botCall.then(data => {
+        stringToHTML(data);
+      });
+    </script>
   </body>
 </html>
